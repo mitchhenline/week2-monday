@@ -330,6 +330,12 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function upperCase(str){
+  return str.toUpperCase()
+}
+
+console.log(upperCase(sampleString))
+
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -342,31 +348,71 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(str){
+  str.trim()
+  if (str.includes("@")){
+    console.log('email verified')
+  } else {console.log('must provide a valid email address')}
+}
+
+console.log(emailCheck('     h@msn.com'))
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
+  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate 
+  frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. 
+  Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
 
+function buyChocolate(numGold){
+    return Math.floor(totalFrogs = (numGold / 3))
+}
+
+console.log(buyChocolate(43))
+
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
-  You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
+  You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... 
+  However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product.
+   Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. 
+   Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
 
+function buyChocolate(numGold){
+  return totalFrogs2 = (Math.floor(totalFrogs = (numGold / 3)))
+}
+
+console.log(buyChocolate(43))
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0,1,2,3,4,5,7,6,8,9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine 
+  if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. 
+  Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
 
+//this code is not working
+
+function newFunction(arr){
+  for (let i=0; i < arr.length; i++){
+    if (arr[i + 1] <= arr[i]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+let arrayIsAscending = newFunction(sampleArray);
+console.log(arrayIsAscending)
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -390,13 +436,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck", "rubberDuck", "sailorDuck", "realDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck", "sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-//let pondScope = []
+let pondScope = ["realDuck"]
